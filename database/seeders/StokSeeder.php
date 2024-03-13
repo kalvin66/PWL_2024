@@ -1,0 +1,57 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class StokSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $data = [
+            [
+                'stok_id' => 1,
+                'barang_id' => 1,
+                'user_id' => 3,
+                'stok_tanggal' => '2024-3-3',
+                'stok_jumlah' => 32,
+            ],
+            [
+                'stok_id' => 2,
+                'barang_id' => 2,
+                'user_id' => 3,
+                'stok_tanggal' => '2024-3-3',
+                'stok_jumlah' => 41,
+            ],
+            [
+                'stok_id' => 3,
+                'barang_id' => 3,
+                'user_id' => 3,
+                'stok_tanggal' => '2024-3-3',
+                'stok_jumlah' => 87,
+            ],
+            [
+                'stok_id' => 4,
+                'barang_id' => 4,
+                'user_id' => 3,
+                'stok_tanggal' => '2024-3-3',
+                'stok_jumlah' => 55,
+            ],
+            [
+                'stok_id' => 5,
+                'barang_id' => 5,
+                'user_id' => 3,
+                'stok_tanggal' => '2024-3-3',
+                'stok_jumlah' => 56,
+            ],
+            
+        ];
+        
+        DB::table('t_stok')->insert($data);               
+    }
+}
